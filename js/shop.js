@@ -25,7 +25,7 @@ function btnClick(saikat) {
       makePur.removeAttribute('disabled')
    }
    else {
-      makePur.setAttribute('disabled', true)
+      makePur.setAttribute('disabled', true) 
    }
 
    document.getElementById('totalPrice').innerText = total.toFixed(2);
@@ -35,7 +35,6 @@ function btnClick(saikat) {
 
 document.getElementById('btn-1').addEventListener('click', function () {
    const input1 = document.getElementById('input-1').value;
-   console.log(input1);
 
    if (input1 === 'SELL200') {
       discountPrice = total * 0.2;
