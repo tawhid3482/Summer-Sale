@@ -25,12 +25,10 @@ function btnClick(saikat) {
       makePur.removeAttribute('disabled')
    }
    else {
-      makePur.setAttribute('disabled', true) 
+      makePur.setAttribute('disabled', true)
    }
 
    document.getElementById('totalPrice').innerText = total.toFixed(2);
-   const grandTotalShow = total - discountPrice;
-   document.getElementById('grandTotal').innerText = grandTotalShow.toFixed(2);
 }
 
 document.getElementById('btn-1').addEventListener('click', function () {
@@ -39,16 +37,14 @@ document.getElementById('btn-1').addEventListener('click', function () {
    if (input1 === 'SELL200') {
       discountPrice = total * 0.2;
       document.getElementById('discount-price').innerText = discountPrice.toFixed(2);
+
+      const grandTotalShow = total - discountPrice;
+      document.getElementById('grandTotal').innerText = grandTotalShow.toFixed(2);
    }
    else {
       discountPrice = 0;
       document.getElementById('discount-price').innerText = '0.00';
    }
-
-   const grandTotalShow = total - discountPrice;
-   document.getElementById('grandTotal').innerText = grandTotalShow.toFixed(2);
-
-
 });
 
 function resetBtn() {
